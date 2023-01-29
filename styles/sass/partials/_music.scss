@@ -1,0 +1,95 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.player {
+    margin: 50px 0;
+}
+
+.videoGallery {
+    @include flex (column, nowrap, center, center)
+}
+
+.item {
+    width: calc(100% - 80px);
+    padding: 0;
+    margin: 5px 40px;
+}
+
+.table {
+    @include flex (row, nowrap, space-between, center);
+    background-color: black;
+}
+
+.tableItem {
+    width: calc((100% / 5) - 20px);
+    padding: 10px 0;
+    margin: 0 10px;
+}
+
+.thumbnail {
+    width: 100%;
+}
+
+.videoTitle {
+    color: $secondaryColour;
+    margin: 20px 0;
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
+    line-height: clamp(1rem, 1vw, 1.5rem);
+    font-weight: 400;
+}
+
+.videoArtist {
+    text-align: center;
+    margin-right: 25px;
+    color: lighten($primaryColour, 40);
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    line-height: clamp(1rem, 1vw, 1.5rem);
+}
+
+.videoDescription {
+    color: $tertiaryColour;
+    font-size: clamp(0.65rem, 1vw, 1rem);
+    line-height: clamp(1rem, 1vw, 1.5rem);
+    margin: 15px 0;
+}
+
+.videoDate {
+    margin-left: 25px;
+    color: lighten($primaryColour, 40);
+    font-size: clamp(0.6rem, 1vw, 0.75rem);
+    line-height: clamp(1rem, 1vw, 1.5rem);
+}
+
+// Alternate Version of Layout (Gallery Style)
+
+// .player {
+//     margin: 50px 0;
+//     @include flex(column, nowrap, center, center);
+// }
+
+// .videoGallery {
+//     @include flex (row, wrap, center, center)
+// }
+
+// .item {
+//     width: calc(50% - 40px);
+//     padding: 0;
+//     margin: 20px
+// }
+
+// .videoTitle {
+//     color: $secondaryColour;
+//     text-align: center;
+//     margin: 20px 0;
+// }
+
+// .thumbnail {
+//     width: 100%;
+// }
+
+// .videoDescription {
+//     color: $tertiaryColour;
+//     text-align: center;
+//     font-size: clamp(0.75rem, 2vw, 1rem);
+//     margin: 15px 0;
+// }
