@@ -33,6 +33,7 @@ app.getVideos = function() {
         })
 }
 
+// function to display API data on the page
 app.displayVideos = function(listOfVideos) {
     console.log(listOfVideos)
     listOfVideos.pop()
